@@ -1,9 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src=""></script>
+        <script src="./src/index.js"></script>
+        <style>
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+
+                padding: 0;
+                margin: 0;
+            }
+
+            canvas {
+                /* width: 512px;
+            height: 256px; */
+
+                width: 100%;
+                max-width: 1000px;
+                /* height: 100vh; */
+
+                image-rendering: pixelated;
+
+                /* border: 2px solid black; */
+            }
+        </style>
     </head>
+
     <body>
-        <canvas id="game"></canvas>
+        <canvas id="game" width="512" height="256"></canvas>
     </body>
 </html>

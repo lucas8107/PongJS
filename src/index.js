@@ -1,6 +1,3 @@
-const CANVAS_WIDTH = 512;
-const CANVAS_HEIGHT = 256;
-
 var canvas;
 var ctx;
 
@@ -14,8 +11,8 @@ window.onload = () => {
 
   lastTime = new Date().getTime();
 
-  objects.push(new Paddle(32, 0));
-  objects.push(new Paddle(CANVAS_WIDTH - 32 - 6, 0));
+  objects.push(new Paddle(32, CANVAS_HEIGHT / 2 - 14));
+  objects.push(new Paddle(CANVAS_WIDTH - 32 - 6, CANVAS_HEIGHT / 2 - 14));
   objects.push(new Ball(32, 0));
 
   requestAnimationFrame(gameLoop);

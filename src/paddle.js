@@ -1,7 +1,7 @@
 class Paddle {
     constructor(x, y) {
-        this.w = 6;
-        this.h = 28;
+        this.w = PADDLE_WIDTH;
+        this.h = PADDLE_HEIGHT;
         this.x = x;
         this.y = y;
     }

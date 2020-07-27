@@ -28,7 +28,7 @@ function gameLoop() {
   ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
   for (obj of objects) {
-    obj.update();
+    obj.update(deltaTime);
     obj.render();
   }
 

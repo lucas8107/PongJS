@@ -5,9 +5,9 @@ var lastTime, currentTime, deltaTime;
 
 var activeScene;
 
-var leftPaddle = new Paddle(32, CANVAS_HEIGHT / 2 - 14);
-var rightPaddle = new Paddle(CANVAS_WIDTH - 32 - 6, CANVAS_HEIGHT / 2 - 14);
-var ball = new Ball(32, 0);
+var leftPaddle;
+var rightPaddle;
+var ball;
 
 class MainScene extends Scene {
 
@@ -15,6 +15,10 @@ class MainScene extends Scene {
     super();
     this.objects = [];
     this.paddles = [];
+
+    leftPaddle = new Paddle(32, CANVAS_HEIGHT / 2 - 14);
+    rightPaddle = new Paddle(CANVAS_WIDTH - 32 - 6, CANVAS_HEIGHT / 2 - 14);
+    ball = new Ball(32, 0);
 
     this.objects.push(leftPaddle);
     this.objects.push(rightPaddle);
@@ -36,7 +40,7 @@ class MainScene extends Scene {
   render(ctx) {
     ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
-    for (obj of this.objects) {
+    for (let obj of this.objects) {
       obj.render();
     }
   }

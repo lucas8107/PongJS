@@ -11,7 +11,7 @@ class Paddle {
         this.y = Math.min(Math.max(this.y, 0), CANVAS_HEIGHT - this.h);
     }
 
-    render() {
+    render(ctx) {
         ctx.fillStyle = "white";
         ctx.fillRect(this.x, this.y, this.w, this.h);
         ctx.fillStyle = "black";

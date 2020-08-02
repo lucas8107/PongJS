@@ -8,7 +8,6 @@ class Paddle {
 
     update(deltaTime) {
         this.y = ball.y - this.h / 2 + ball.h / 2;
-
         this.y = Math.min(Math.max(this.y, 0), CANVAS_HEIGHT - this.h);
     }
 

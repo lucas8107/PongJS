@@ -4,9 +4,7 @@ class Ball {
         this.h = BALL_HEIGHT;
         this.x = CANVAS_WIDTH / 2;
         this.y = CANVAS_HEIGHT / 2;
-        // this.dx = 7;
         this.dx = 30;
-        // this.dy = 7;
         this.dy = 70;
     }
 
@@ -35,7 +33,7 @@ class Ball {
         }
     }
 
-    render() {
+    render(ctx) {
         ctx.fillStyle = "white";
         ctx.fillRect(this.x, this.y, this.w, this.h);
         ctx.fillStyle = "black";

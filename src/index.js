@@ -41,7 +41,7 @@ class MainScene extends Scene {
     ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
     for (let obj of this.objects) {
-      obj.render();
+      obj.render(ctx);
     }
   }
 }
@@ -55,6 +55,10 @@ window.onload = () => {
   activeScene = new MainScene();
 
   requestAnimationFrame(gameLoop);
+}
+
+window.onresize = () => {
+  $('#game').height($('#game').width() / 2);
 }
 
 function gameLoop() {
